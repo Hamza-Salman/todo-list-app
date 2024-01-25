@@ -1,6 +1,5 @@
 'use client'
-import { PrismaClient, Task } from '@prisma/client'
-import { deleteTask } from '../utils'
+import { PrismaClient } from '@prisma/client'
 import {useRouter} from 'next/navigation';
 
 const prisma = new PrismaClient()

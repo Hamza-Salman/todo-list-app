@@ -2,6 +2,7 @@ import React from "react"
 import './globals.css'
 import { getTasks } from './utils'
 import DeleteButton from "./components/DeleteButton"
+import AddForm from "./components/AddForm"
 
 export default async function page() {
 
@@ -26,6 +27,7 @@ export default async function page() {
   return (
     <main>
       <h1>Tasks</h1>
+      <AddForm/>
       <ul>
         {tasks.map(task => (
           <div key={task.id}>
