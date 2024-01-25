@@ -1,7 +1,7 @@
 import React from "react"
 import './globals.css'
 import { getTasks } from './utils'
-import DeleteButton from "./components/deleteButton"
+import DeleteButton from "./components/DeleteButton"
 
 export default async function page() {
 
@@ -28,7 +28,7 @@ export default async function page() {
       <h1>Tasks</h1>
       <ul>
         {tasks.map(task => (
-          <div>
+          <div key={task.id}>
             <li key={task.id}>{task.task}</li>
             <DeleteButton id={task.id}/>
           </div>

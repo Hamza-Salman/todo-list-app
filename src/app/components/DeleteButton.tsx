@@ -6,7 +6,7 @@ import {useRouter} from 'next/navigation';
 const prisma = new PrismaClient()
 
 
-export default function deleteButton({id} : {id: string}) {
+export default function DeleteButton({id} : {id: string}) {
 
     const router = useRouter()
     // const handleDelete = async(deleteId: string) => {
@@ -23,7 +23,6 @@ export default function deleteButton({id} : {id: string}) {
                 id: deleteId,
             }),
         });
-        console.log("button triggered api")
         router.refresh();
     };
 
